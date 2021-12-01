@@ -65,13 +65,13 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 	padding-top: 0.8rem;
 	width: 100%;
 	border-bottom: 2px solid #000;
 }
 
 .close {
-align-self: flex-start;
 font-size: var(--text-md);
 }
 
