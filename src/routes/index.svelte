@@ -1,24 +1,23 @@
 <script context="module">
 	import Day from '$lib/Day.svelte';
 
-	export const load = async ({ fetch, page }) => {
+	export const load = async ({ fetch }) => {
 		const response = await fetch('/data/days.json');
 		const responseJson = await response.json();
-		const backstagepass = page.query.get('backstagepass');
 		return {
 			props: {
-				days: responseJson,
-				backstagepass
+				days: responseJson
 			}
 		}
 	}
 </script>
 
 <script>
+	import { page } from '$app/stores'
 
 	export let days;
-	export let backstagepass;
 
+	const backstagepass = $page.query.get('backstagepass')
 	let vip = ['cathrine','eivind','svale'].includes(backstagepass)
 
 	let selected = null
