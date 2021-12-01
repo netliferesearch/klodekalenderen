@@ -1,27 +1,32 @@
 <script context="module">
 	import Day from '$lib/Day.svelte';
 
-	export const load = async ({ fetch }) => {
-			const response = await fetch('/data/days.json');
-			const responseJson = await response.json();
-			return {
-				props: {
-					days: responseJson
-				}
+	export const load = async ({ fetch, page }) => {
+		const response = await fetch('/data/days.json');
+		const responseJson = await response.json();
+		const backstagepass = page.query.get('backstagepass');
+		return {
+			props: {
+				days: responseJson,
+				backstagepass
 			}
+		}
 	}
 </script>
 
 <script>
 
 	export let days;
+	export let backstagepass;
+
+	let vip = ['cathrine','eivind','svale'].includes(backstagepass)
 
 	let selected = null
-	// let currentDate = new Date(2021, 11, 15); // NB TEST DATE
-  let currentDate = new Date();
+	let currentDate = vip ? new Date(2021, 11, 24) : new Date()
+	let date = currentDate.getDate()
+
 	// let randoms = Array.from({length: 9}, () => Math.floor(Math.random() * 23));
 	// let colors = [randoms.splice(0,3), randoms.splice(0,3), randoms]
-	let date = currentDate.getDate()
 
 	function handleKeydown(event) {
 		if (event.key === 'Escape') {
@@ -39,7 +44,6 @@
 <svelte:head>
 	<title>Netlifes klodekalender - luke {date}</title>
 </svelte:head>
-
 
 <div class="calendar-grid">
 	{#each days as day}

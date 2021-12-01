@@ -4,10 +4,6 @@
 
   const dispatch = createEventDispatcher();
 
-  export const load = async ({ page }) => {
-    console.log('page', page)
-  }
-
   const [send, receive] = crossfade({
 		duration: 200,
 		fallback: scale
