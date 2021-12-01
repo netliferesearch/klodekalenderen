@@ -29,7 +29,6 @@
 
   function open(day) {
     if(date >= day) {
-      console.log(day)
       dispatch('click', {id: day});
       goToTop()
     }
