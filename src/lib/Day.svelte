@@ -111,7 +111,7 @@ font-size: var(--text-md);
 }
 .day:hover {
 	background-color: var(--primary-color-dark);
-  cursor: wait;
+  cursor: not-allowed;
 }
 
 .day.openable {
