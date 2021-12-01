@@ -51,12 +51,14 @@
   in:receive={{key:day}}
   out:send={{key:day}}
   class="day day-{day}" class:openable class:today>
-  <div class="front">{day}</div>
+  {#if !selected}
+    <div class="front">{day}</div>
+  {/if}
   {#if selected == day}
     <article class="back" in:receive={{key:day}} out:send={{key:day}}>
       <header class="header">
         <h1 class="">Luke {day}: {title}</h1>
-        <button class="close" on:click|stopPropagation="{close}">X</button>
+        <button class="close" on:click|stopPropagation="{close}"></button>
       </header>
       <div class="content">{@html content}</div>
     </article>
@@ -77,9 +79,15 @@
 align-self: flex-start;
 font-size: var(--text-md);
 }
+
+.close:hover {
+  border-bottom:2px solid var(--text-color);
+}
+
 .content {
   margin-top: 1rem;
   max-width: 65ch;
+  padding-bottom: 2rem;
 }
 
 .front {
@@ -92,7 +100,7 @@ font-size: var(--text-md);
 		top: 0;
 		left: 0;
 		width: 100vw;
-		height: 100vh;
+		min-height: 100vh;
 		overflow: hidden;
     z-index: 10000;
     background-color: var(--background-color);
