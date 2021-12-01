@@ -9,8 +9,8 @@ const config = {
 	kit: {
 		paths: {
 			// base: dev ? '' : '/greeencalendar2021',
-			base: '/klodekalenderen',
-			// base: '',
+			// base: '/klodekalenderen',
+			base: '',
 		},
 		adapter: adapter({
 			pages: 'build',

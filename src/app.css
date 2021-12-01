@@ -4,20 +4,20 @@
 /* /greeencalendar2021/ */
 @font-face {
 	font-family: 'NetlifeSans';
-	src: url('../fonts/Netlife-Regular.eot');
-	src: url('../fonts/Netlife-Regular.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Netlife-Regular.woff') format('woff'),
-		url('../fonts/Netlife-Regular.woff2') format('woff2');
+	src: url('/fonts/Netlife-Regular.eot');
+	src: url('/fonts/Netlife-Regular.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/Netlife-Regular.woff') format('woff'),
+		url('/fonts/Netlife-Regular.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
 }
 @font-face {
 	font-family: 'NetlifeSans';
-	src: url('../fonts/Netlife-Bold.eot');
-	src: url('../fonts/Netlife-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Netlife-Bold.woff') format('woff'),
-		url('../fonts/Netlife-Bold.woff2') format('woff2');
+	src: url('/fonts/Netlife-Bold.eot');
+	src: url('/fonts/Netlife-Bold.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/Netlife-Bold.woff') format('woff'),
+		url('/fonts/Netlife-Bold.woff2') format('woff2');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
