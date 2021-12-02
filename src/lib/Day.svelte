@@ -49,6 +49,7 @@
   {#if !selected}
     <div class="front">{day}</div>
   {/if}
+</button>
   {#if selected == day}
     <article class="back" in:receive={{key:day}} out:send={{key:day}}>
       <header class="header">
@@ -58,7 +59,6 @@
       <div class="content">{@html content}</div>
     </article>
   {/if}
-</button>
 
 <style>
 
