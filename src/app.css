@@ -117,14 +117,13 @@ ul>li:before {
 
 a {
 	color: var(--text-color);
-  color: $color-dark;
   font-weight: 400;
-  text-decoration: none;
+	text-decoration: underline;
 }
 
 a:hover,
 a:focus {
-	color: $color-action;
+	color: var(--primary-color-dark);
 	text-decoration: underline;
 }
 
