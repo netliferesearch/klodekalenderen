@@ -48,7 +48,6 @@ body {
 	margin: 0;
 	background-color: var(--background-color);
 	font-size: clamp(18px, 1.6vw, 36.25px);
-
 }
 
 #svelte {
@@ -148,5 +147,5 @@ button:focus:not(:focus-visible) {
 	outline: none;
 }
 
-@tailwind components;
-@tailwind utilities;
+/* @tailwind components;
+@tailwind utilities; */

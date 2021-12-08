@@ -37,9 +37,6 @@
   function goToTop() {
     document.body.scrollIntoView();
   }
-
-
-
 </script>
 
 <button on:click|stopPropagation="{() => open(day)}"
