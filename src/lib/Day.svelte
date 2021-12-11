@@ -44,13 +44,17 @@
   out:send={{key:day}}
   class="day day-{day}" class:openable class:today>
   {#if !selected}
-    <div class="front">{day}</div>
+    <div class="front"><h2>{day}</h2>
+      {#if openable}
+        <h1>{ title }</h1>
+      {/if}
+    </div>
   {/if}
 </button>
   {#if selected == day}
     <article class="back" in:receive={{key:day}} out:send={{key:day}}>
       <header class="header">
-        <h1 class="">Luke {day}: {title}</h1>
+        <h1 class="heading-1">Luke {day}: {title}</h1>
         <button class="close" on:click|stopPropagation="{close}"></button>
       </header>
       <div class="content">{@html content}</div>
@@ -68,6 +72,15 @@
 	border-bottom: 2px solid #000;
 }
 
+.heading-1 {
+	font-size: clamp(26px, 2.5vw, 58px);
+	font-weight: 500;
+	margin-top: 0;
+	margin-bottom: 1.6rem;
+	text-indent: -0.05em;
+	letter-spacing: -0.1rem;
+}
+
 .close {
 font-size: var(--text-md);
 }
@@ -83,6 +96,15 @@ font-size: var(--text-md);
 }
 
 .front {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  line-height: 1.125;
+}
+.front h2 {
+  text-align: left;
   font-size: 3rem;
   font-weight: 700;
 }
@@ -107,7 +129,7 @@ font-size: var(--text-md);
 	padding: 1rem;
 }
 .day:hover {
-	background-color: var(--primary-color-dark);
+	/* background-color: var(--lemon-color); */
   cursor: not-allowed;
 }
 
@@ -115,7 +137,7 @@ font-size: var(--text-md);
   background-color: var(--primary-color-dark);
 }
 .day.openable:hover {
-  background-color: var(--primary-color);
+  background-color: var(--lemon-color);
   cursor: pointer;
 }
 .day.today:hover {
