@@ -1,5 +1,6 @@
 <script context="module">
 	import Day from '$lib/Day.svelte';
+	import Snow from '$lib/Snow.svelte';
 
 	export const load = async ({ fetch }) => {
 		const response = await fetch('/data/days.json');
@@ -109,3 +110,5 @@
 		}
 	}
 </style>
+
+<Snow />
