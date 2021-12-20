@@ -29,3 +29,6 @@ npm run deploy
 ## Credits and inspirations
 https://svelte.dev
 https://codepen.io/Dtap/full/oNzeJrO
+https://svelte.dev/repl/67b6214e5a654b4faec6237465c0d669?version=3.44.2
+
+Thanks :-)
