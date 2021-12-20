@@ -46,7 +46,7 @@
   {#if !selected}
     <div class="front"><h2>{day}</h2>
       {#if openable}
-        <h1>{ title }</h1>
+        <h1>{@html title}</h1>
       {/if}
     </div>
   {/if}
@@ -54,7 +54,7 @@
   {#if selected == day}
     <article class="back" in:receive={{key:day}} out:send={{key:day}}>
       <header class="header">
-        <h1 class="heading-1">Luke {day}: {title}</h1>
+        <h1 class="heading-1">Luke {day}: {@html title}</h1>
         <button class="close" on:click|stopPropagation="{close}"></button>
       </header>
       <div class="content">{@html content}</div>

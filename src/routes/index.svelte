@@ -56,20 +56,25 @@
 		height: 100vh;
 		position: relative;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(11, 1fr);;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(16, 1fr);;
 		grid-template-areas:
-			"day13 day05 day09"
-			"day22 day18 day18"
-			"day07 day06 day16"
-			"day02 day02 day17"
-			"day03 day24 day17"
-			"day01 day12 day20"
-			"day01 day15 day11"
-			"day08 day10 day11"
-			"day19 day10 day14"
-			"day21 day10 day23"
-			"day04 day04 day23"
+			"day08 day05"
+			"day22 day18"
+			"day07 day18"
+			"day02 day02"
+			"day03 day24"
+			"day01 day12"
+			"day01 day15"
+			"day06 day11"
+			"day23 day10"
+			"day19 day10"
+			"day21 day10"
+			"day04 day04"
+			"day09 day16"
+			"day17 day20"
+			"day17 day14"
+			"day13 day13"
 			;
 	}
 @media only screen and (min-width: 600px){
