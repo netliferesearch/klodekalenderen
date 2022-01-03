@@ -24,6 +24,7 @@
 	let selected = null
 	let currentDate = vip ? new Date(2021, 11, 24) : new Date()
 	let date = currentDate.getDate()
+	let year = currentDate.getFullYear()
 
 	// let randoms = Array.from({length: 9}, () => Math.floor(Math.random() * 23));
 	// let colors = [randoms.splice(0,3), randoms.splice(0,3), randoms]
@@ -47,7 +48,7 @@
 
 <div class="calendar-grid">
 	{#each days as day}
-			<Day date={date} {...day} selected={selected} on:click={handleClick} />
+			<Day year={year} date={date} {...day} selected={selected} on:click={handleClick} />
 	{/each}
 </div>
 

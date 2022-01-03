@@ -9,6 +9,7 @@
 		fallback: scale
 	});
 
+  export let year
   export let date
   export let day
   export let title
@@ -20,7 +21,8 @@
   // let lemon = colors[1].includes(day)
   // let sky = colors[2].includes(day)
 
-  let openable = day < date
+  let calendarYear = 2021;
+  let openable = year > calendarYear || day < date
   let today = day === date
 
 	function close() {
