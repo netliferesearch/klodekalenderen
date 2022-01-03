@@ -30,7 +30,7 @@
   }
 
   function open(day) {
-    if(date >= day) {
+    if(year > calendarYear || date >= day) {
       dispatch('click', {id: day});
       goToTop()
     }
